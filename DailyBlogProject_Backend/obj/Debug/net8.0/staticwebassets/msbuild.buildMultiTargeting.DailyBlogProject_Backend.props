@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DailyBlogProject_Backend.props" />
+</Project>

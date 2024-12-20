@@ -1,95 +1,19 @@
 [
   {
     "ContainingType": "DailyBlogProject_Backend.Controllers.BlogController",
-    "Method": "GetBlog",
-    "RelativePath": "api/Blog",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "DailyBlogProject_Backend.Controllers.BlogController",
-    "Method": "CreateBlog",
-    "RelativePath": "api/Blog",
+    "Method": "GetBlogByID",
+    "RelativePath": "api/Blog/getByID",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "DailyBlogProject_Backend.Controllers.BlogController",
-    "Method": "GetBlogByID",
-    "RelativePath": "api/Blog/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Name": "simpleRequest",
+        "Type": "DailyBlogProject.Common.Request.SimpleRequest",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "DailyBlogProject_Backend.Controllers.BlogController",
-    "Method": "DeleteBlog",
-    "RelativePath": "api/Blog/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "DailyBlogProject_Backend.Controllers.WeatherForecastController",

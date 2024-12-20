@@ -1,33 +1,26 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DailyBlogProject.BLL;
+using DailyBlogProject.Common.Request;
+using DailyBlogProject.Common.Response;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DailyBlogProject_Backend.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]
+    [ApiController]
     public class BlogController : ControllerBase
     {
-        [HttpGet]
-        public string GetBlog ()
+        private BlogService categoryService;
+        public BlogController()
         {
-            return "reading all the blog";
+            categoryService = new BlogService();
         }
-
-        [HttpGet("{id}")]
-        public string GetBlogByID(int id)
+        [HttpPost("getByID")]
+        public IActionResult GetBlogByID([FromBody] SimpleRequest simpleRequest)
         {
-            return $"reading blog ID: {id}";
-        }
-
-        [HttpPost]
-        public string CreateBlog()
-        {
-            return $"Create a blog";
-        }
-
-        [HttpDelete("{id}")]
-        public string DeleteBlog()
-        {
-            return $"Delete a blog";
+            var response = new SingleResponse();
+            response = categoryService.Read(simpleRequest.Id);
+            return Ok(response);
         }
     }
 }

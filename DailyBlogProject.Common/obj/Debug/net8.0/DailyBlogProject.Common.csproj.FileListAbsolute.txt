@@ -1,0 +1,15 @@
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject.Common\bin\Debug\net8.0\DailyBlogProject.Common.deps.json
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject.Common\bin\Debug\net8.0\DailyBlogProject.Common.dll
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject.Common\bin\Debug\net8.0\DailyBlogProject.Common.pdb
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject.Common\obj\Debug\net8.0\DailyBlogProject.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject.Common\obj\Debug\net8.0\DailyBlogProject.Common.AssemblyInfoInputs.cache
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject.Common\obj\Debug\net8.0\DailyBlogProject.Common.AssemblyInfo.cs
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject.Common\obj\Debug\net8.0\DailyBlogProject.Common.csproj.CoreCompileInputs.cache
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject.Common\obj\Debug\net8.0\DailyBlogProject.Common.sourcelink.json
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject.Common\obj\Debug\net8.0\DailyBlogProject.Common.dll
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject.Common\obj\Debug\net8.0\refint\DailyBlogProject.Common.dll
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject.Common\obj\Debug\net8.0\DailyBlogProject.Common.pdb
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject.Common\obj\Debug\net8.0\ref\DailyBlogProject.Common.dll
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject.Common\bin\Debug\net8.0\DailyBlogProject.Common.runtimeconfig.json
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject.Common\obj\Debug\net8.0\DailyBlogProject.Common.csproj.AssemblyReference.cache
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject.Common\obj\Debug\net8.0\DailyBlogProject.Common.genruntimeconfig.cache

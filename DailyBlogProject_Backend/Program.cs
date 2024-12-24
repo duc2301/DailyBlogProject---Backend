@@ -1,3 +1,12 @@
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using DailyBlogProject.BLL;
+using DailyBlogProject.DAL;
+using DailyBlogProject.DAL.Models;
 
 namespace DailyBlogProject_Backend
 {
@@ -8,11 +17,17 @@ namespace DailyBlogProject_Backend
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            // Add DbContext and configure connection string
+            builder.Services.AddDbContext<DailyBlogProjectContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            // Add dependency injection for Unit of Work and BlogService
+            builder.Services.AddScoped<UnitOfWork>();
+            builder.Services.AddScoped<BlogService>();
 
             var app = builder.Build();
 
@@ -24,34 +39,8 @@ namespace DailyBlogProject_Backend
             }
 
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
-
             app.MapControllers();
-
-            //Routing
-            // "Blog"
-            //app.MapGet("/Blog", () =>
-            //{
-            //    return "reading all blog";
-            //});
-
-            //app.MapGet("/Blog/{id}", (int id) =>
-            //{
-            //    return "Rading blog by ID";
-            //});
-
-            //app.MapPost("/Blog/Create", () =>
-            //{
-            //    return "creating a new blog ";
-            //});
-
-            //app.MapDelete("/Map/Delete{id}", (int id) =>
-            //{
-            //    return "Delete successfully";
-            //});
-
             app.Run();
         }
     }

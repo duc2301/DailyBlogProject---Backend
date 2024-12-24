@@ -1,40 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 
-namespace DailyBlogProject.DAL.Models;
 
-public partial class DailyBlogProjectContext : DbContext
+namespace DailyBlogProject.DAL.Models
 {
-    public DailyBlogProjectContext()
+    public partial class DailyBlogProjectContext : DbContext
     {
-    }
 
-    public DailyBlogProjectContext(DbContextOptions<DailyBlogProjectContext> options)
-        : base(options)
-    {
-    }
-
-    public virtual DbSet<Blog> Blogs { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=DailyBlogProject;Persist Security Info=True;User ID=sa;Password=12345;Encrypt=False");
-
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.Entity<Blog>(entity =>
+        public DailyBlogProjectContext()
         {
-            entity
-                .HasNoKey()
-                .ToTable("Blog");
+        }
 
-            entity.Property(e => e.BlogId).ValueGeneratedOnAdd();
-            entity.Property(e => e.BlogName).HasMaxLength(50);
-        });
+        public DailyBlogProjectContext(DbContextOptions<DailyBlogProjectContext> options)
+            : base(options)
+        {
+        }
 
-        OnModelCreatingPartial(modelBuilder);
+        public virtual DbSet<Blog> Blogs { get; set; }
+        //public DbSet<User> Users { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Blog>(entity =>
+            {
+                entity.ToTable("Blog");
+
+                entity.HasKey(e => e.BlogId);
+
+                entity.Property(e => e.BlogId).ValueGeneratedOnAdd();
+                entity.Property(e => e.BlogName).HasMaxLength(100).IsRequired();
+            });
+
+
+
+            OnModelCreatingPartial(modelBuilder);
+        }
+
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
     }
-
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

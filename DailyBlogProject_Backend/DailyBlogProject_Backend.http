@@ -1,4 +1,4 @@
-@DailyBlogProject_Backend_HostAddress = http://localhost:5024
+@DailyBlogProject_Backend_HostAddress = http://localhost:5432
 
 GET {{DailyBlogProject_Backend_HostAddress}}/weatherforecast/
 Accept: application/json

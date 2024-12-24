@@ -5,3 +5,9 @@ Install-Package Microsoft.EntityFrameworkCore.Tools -Version 8.0.0
 Scaffold-DbContext "Data Source=localhost;Initial Catalog=DailyBlogProject;User ID=SA;Password=12345;Encrypt=True;TrustServerCertificate=False" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force
 
 Scaffold-DbContext "Data Source=localhost;Initial Catalog=DailyBlogProject;Persist Security Info=True;User ID=sa;Password=12345;Encrypt=False" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force
+
+
+Install-Package Microsoft.Extensions.Configuration
+Install-Package Microsoft.Extensions.Configuration.Json
+Install-Package Microsoft.Extensions.Configuration.FileExtensions
+Install-Package Microsoft.EntityFrameworkCore.SqlServer

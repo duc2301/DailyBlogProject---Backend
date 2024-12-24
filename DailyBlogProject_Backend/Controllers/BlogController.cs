@@ -1,7 +1,7 @@
 ﻿using DailyBlogProject.BLL;
 using DailyBlogProject.Common.Request;
 using DailyBlogProject.Common.Response;
-using Microsoft.AspNetCore.Http;
+using DailyBlogProject.DAL.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DailyBlogProject_Backend.Controllers
@@ -10,16 +10,34 @@ namespace DailyBlogProject_Backend.Controllers
     [ApiController]
     public class BlogController : ControllerBase
     {
-        private BlogService categoryService;
-        public BlogController()
+        private readonly BlogService _blogService;
+
+        public BlogController(BlogService blogService)
         {
-            categoryService = new BlogService();
+            _blogService = blogService;
         }
-        [HttpPost("getByID")]
-        public IActionResult GetBlogByID([FromBody] SimpleRequest simpleRequest)
+
+        [HttpGet("get-By-ID")]
+        public IActionResult GetBlogByID([FromQuery] BlogRequestModel blogRequest)
         {
-            var response = new SingleResponse();
-            response = categoryService.Read(simpleRequest.Id);
+            if (blogRequest == null)
+            {
+                return BadRequest("Invalid request.");
+            }
+
+            var response = _blogService.GetBlogByID(blogRequest.BlogId);
+            if (response.Data == null)
+            {
+                return NotFound("Blog not found.");
+            }
+
+            return Ok(response);
+        }
+
+        [HttpGet("GetAll")]
+        public IActionResult GetAll()
+        {
+            var response = _blogService.GetAll();
             return Ok(response);
         }
     }

@@ -173,3 +173,15 @@ D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject_Backend\
 D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject_Backend\obj\Debug\net8.0\DailyBlogProject_Backend.pdb
 D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject_Backend\obj\Debug\net8.0\DailyBlogProject_Backend.genruntimeconfig.cache
 D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject_Backend\obj\Debug\net8.0\ref\DailyBlogProject_Backend.dll
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject_Backend\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject_Backend\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject_Backend\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject_Backend\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject_Backend\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject_Backend\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject_Backend\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject_Backend\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject_Backend\bin\Debug\net8.0\System.IO.Pipelines.dll
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject_Backend\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject_Backend\bin\Debug\net8.0\System.Text.Json.dll
+D:\Project\BlogWeb\Back-end\DailyBlogProject---Backend\DailyBlogProject_Backend\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
